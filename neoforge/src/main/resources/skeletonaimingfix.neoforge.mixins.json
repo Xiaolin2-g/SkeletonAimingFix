@@ -3,11 +3,16 @@
   "minVersion": "0.8",
   "package": "com.xiaolin.skeletonaimingfix.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
-  "client": [
-    "MixinTitleScreen"
+  "mixins": [
+
+    "SkeletonAimingFixMixin"
   ],
-  "server": [],
+  "client": [
+
+  ],
+  "server": [
+
+  ],
   "injectors": {
     "defaultRequire": 1
   }

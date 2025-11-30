@@ -8,15 +8,15 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "",
+        "sources": "https://github.com/Xiaolin2-g/SkeletonAimingFix"
     },
     "license": "${license}",
-    "icon": "${mod_id}.png",
+    "icon": "assets/${mod_id}/icon.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-          "com.xiaolin.skeletonaimingfix.ExampleMod"
+          "com.xiaolin.skeletonaimingfix.SkeletonAimingFix"
         ]
     },
     "mixins": [

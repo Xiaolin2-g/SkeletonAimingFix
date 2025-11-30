@@ -4,11 +4,16 @@
   "package": "com.xiaolin.skeletonaimingfix.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
-  "client": [
-    "MixinTitleScreen"
+  "mixins": [
+
+    "SkeletonAimingFixMixin"
   ],
-  "server": [],
+  "client": [
+
+  ],
+  "server": [
+
+  ],
   "injectors": {
     "defaultRequire": 1
   }
