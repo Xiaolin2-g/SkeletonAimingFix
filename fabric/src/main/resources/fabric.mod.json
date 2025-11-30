@@ -9,7 +9,8 @@
     ],
     "contact": {
         "homepage": "",
-        "sources": "https://github.com/Xiaolin2-g/SkeletonAimingFix"
+        "sources": "https://github.com/Xiaolin2-g/SkeletonAimingFix",
+        "issues": "https://github.com/Xiaolin2-g/SkeletonAimingFix/issues"
     },
     "license": "${license}",
     "icon": "assets/${mod_id}/icon.png",
