@@ -1,9 +1,9 @@
 package com.xiaolin.skeletonaimingfix.mixin;
 
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.goal.RangedBowAttackGoal;
+import net.minecraft.world.entity.monster.Monster;
 
-import org.slf4j.LoggerFactory;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -12,18 +12,17 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
-import java.util.logging.Logger;
 
-
-@Mixin(net.minecraft.world.entity.ai.goal.RangedBowAttackGoal.class)
+@Mixin(RangedBowAttackGoal.class)
 public abstract class SkeletonAimingFixMixin {
 
     @Shadow @Final
-    private Mob mob;
+    private Monster mob;
 
-    @Inject(method = "tick", at = @At(value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/Mob;lookAt(Lnet/minecraft/world/entity/Entity;FF)V",
-            shift = At.Shift.AFTER),
+    @Inject(method = "tick",
+            at = @At(value = "INVOKE",
+                    target = "Lnet/minecraft/world/entity/monster/Monster;lookAt(Lnet/minecraft/world/entity/Entity;FF)V",
+                    shift = At.Shift.AFTER),
             locals = LocalCapture.CAPTURE_FAILSOFT)
 
     public void skeletonAimingFix(CallbackInfo ci, LivingEntity livingEntity){
